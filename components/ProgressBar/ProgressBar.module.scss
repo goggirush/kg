@@ -1,0 +1,50 @@
+// CategoryProgressBar
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .track {
+    width: 50%;
+    height: 12px;
+    background-color: #e5eaf2;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+  }
+  
+  .filled {
+    height: 100%;
+    background-color: #50be52;
+    transition: width 0.3s ease;
+    border-radius: 999px;
+  }
+  
+  .label {
+    font-size: 0.85rem;
+    color: #444;
+    font-weight: 500;
+  }
+
+
+// CourseProgressBar
+.courseWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+.courseTrack {
+  width: 100%;
+  height: 12px;
+  background-color: #e5eaf2;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+
+  

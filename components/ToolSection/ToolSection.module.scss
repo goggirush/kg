@@ -1,0 +1,80 @@
+.toolSection {
+  position: relative;
+  background: linear-gradient(0deg,   #041e42 0%, #5795c7 100%,);
+  padding-bottom: 80px;
+  text-align: center;
+  overflow: hidden;
+
+  &__waveTop,
+  &__waveBottom {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    line-height: 0;
+    z-index: 1;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__waveTop {
+    top: 0;
+  }
+
+  &__waveBottom {
+    bottom: 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-top: 100px; // leaves space below top wave
+    margin-bottom: 15px;
+    color: #f5f7ff;
+    position: relative;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+  }
+}
+
+.toolCard {
+  background-color: #f5f7ff;
+  border-radius: 1rem;
+  max-width: 360px;
+ // height: 240px;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  flex: 1;
+
+  &__title {
+    font-weight: 600;
+    color: #2e5a86;
+    margin-bottom: 0rem;
+  }
+
+  &__text {
+    font-size: 0.85rem;
+    color: #7b7b7b;
+    margin: .5rem 0rem .75rem;
+    padding: 0 1rem;
+        text-align: left !important;
+
+  }
+}

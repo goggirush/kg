@@ -1,0 +1,58 @@
+.featureHighlightSection {
+  padding: 6rem 1.5rem;
+  background-color: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0d1b2a;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.125rem;
+    color: #5f6c7b;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .featureItem {
+    background-color: #fff;
+    padding: 1.75rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .featureTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e2a38;
+    margin-bottom: 0.5rem;
+  }
+
+  .featureDesc {
+    font-size: 0.95rem;
+    color: #495867;
+    line-height: 1.6;
+  }
+}

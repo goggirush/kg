@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    gap: 2rem;
+    height: 460px;
+    overflow: auto;
+  }
+
+  .toggleViewContainer{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+  }
+  
