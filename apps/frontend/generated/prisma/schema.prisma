@@ -1,0 +1,79 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Add models below here
+model User {
+  id       String           @id @default(cuid())
+  email    String           @unique
+  name     String?
+  progress CourseProgress[]
+  attempts QuizAttempt[]
+}
+
+model Course {
+  id          String           @id @default(cuid())
+  title       String
+  description String
+  categories  Category[]
+  progress    CourseProgress[]
+}
+
+model Category {
+  id       String  @id @default(cuid())
+  name     String
+  courseId String
+  course   Course  @relation(fields: [courseId], references: [id])
+  slides   Slide[]
+  quizzes  Quiz[]
+}
+
+model Slide {
+  id         String   @id @default(cuid())
+  title      String
+  content    String
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+}
+
+model Quiz {
+  id         String        @id @default(cuid())
+  question   String
+  options    String[] // or a separate Option model
+  correct    Int // index of correct option
+  categoryId String
+  category   Category      @relation(fields: [categoryId], references: [id])
+  attempts   QuizAttempt[]
+}
+
+model QuizAttempt {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  quizId      String
+  quiz        Quiz     @relation(fields: [quizId], references: [id])
+  selected    Int
+  correct     Boolean
+  attemptedAt DateTime @default(now())
+}
+
+model CourseProgress {
+  id       String @id @default(cuid())
+  userId   String
+  courseId String
+  slide    Int
+  user     User   @relation(fields: [userId], references: [id])
+  course   Course @relation(fields: [courseId], references: [id])
+}

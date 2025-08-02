@@ -1,0 +1,174 @@
+.wrapper {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ————————————————————— Header Row ————————————————————— */
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.25rem;
+  padding: 0 1rem;
+}
+
+.headerLabel {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #444;
+}
+
+
+/* ————————————————————— Questions Container ————————————————————— */
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* ————————————————————— Card Styles ————————————————————— */
+.card {
+  background: #fcfcff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d6d7ee;
+
+  &:nth-of-type(even) {
+    background: #fff;
+    border-color: #d6d7ee;
+  }
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* keep circles up top on multi-line text */
+}
+
+.questionCell {
+  flex: 5;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.questionNumber {
+  font-weight: bold;
+  color: #00447c;
+  margin-right: 0.5rem;
+}
+
+/* ————————————————————— Radios / Options ————————————————————— */
+.options {
+  flex: 6; /* exactly 5 columns */
+  display: flex;
+  justify-content: space-between;
+}
+
+.optionLabel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.radioInput {
+  display: none;
+}
+
+.optionCircle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #b5cfe4;
+  border-radius: 50%;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.selected {
+  background-color: #00447c;
+  border-color: #00447c;
+}
+
+
+/* ───────────────────────────────────────────────────────── */
+/* Result Card Layout */
+.resultCardFull {
+  background: linear-gradient(to bottom right, #f0f6ff, #fcfdff);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #ccd9ee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.resultHeader {
+  margin-bottom: 1rem;
+}
+
+.resultCardFull h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #00447c;
+}
+
+.resultCardFull h4 {
+  font-size: 1.2rem;
+  color: #3c6eaf;
+  margin-bottom: 1rem;
+}
+
+.progressBar {
+  background: #e0e5eb;
+  border-radius: 6px;
+  height: 16px;
+  overflow: hidden;
+  margin: 0 auto 0.5rem;
+  width: 100%;
+}
+
+.filled {
+  background-color: #00447c;
+  height: 100%;
+  transition: width 0.4s ease-in-out;
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.resultMessage {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.recommendationSection h5 {
+  font-size: 1.1rem;
+  color: #00447c;
+  margin-bottom: 0.5rem;
+}
+
+.recommendations {
+  list-style: disc;
+  padding-left: 1.25rem;
+  text-align: left;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ————————————————————— Button Container ————————————————————— */
+.btnContainer {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: end;
+}
